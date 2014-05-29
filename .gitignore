@@ -1,0 +1,5 @@
+*.swp
+*.js
+*.css
+*.html
+node_modules/

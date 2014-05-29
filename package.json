@@ -1,0 +1,26 @@
+{
+  "name": "krunkbutton",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies":{
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-jade": "*",
+    "grunt-contrib-stylus": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unscsprt/krunkbutton.git"
+  },
+  "author": "unscsprt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unscsprt/krunkbutton/issues"
+  },
+  "homepage": "https://github.com/unscsprt/krunkbutton"
+}

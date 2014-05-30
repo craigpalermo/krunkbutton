@@ -33,7 +33,15 @@ jQuery ($) ->
     # reset click
     reset = $("#reset")
     reset.on 'click', ->
-        if confirm "Are you sure you want to reset your counter?"
+        x = Math.floor(Math.random() * 15)
+        y = Math.floor(Math.random() * 15)
+        correct = x + y
+        answer = prompt("Prove that you're sober to reset your count:\n#{x} + #{y} = ")
+        
+        if parseInt(answer) is correct
             count = 0
             $count.html count
             disabled = false
+        else
+            alert "Sure you're not still buzzed? That was an easy problem..."
+

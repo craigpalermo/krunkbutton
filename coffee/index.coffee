@@ -1,16 +1,24 @@
 jQuery ($) ->
     # initialize counter
-    count = 0
-    $count = $("#count")
-    $count.html count
+    if Modernizr.localstorage
+        if localStorage["count"]
+            count = parseInt(localStorage["count"])
+        else
+            localStorage["count"] = 0
+            count = 0
+    else
+        count = 0
+
+    $count = $("#count")    # get element
+    $count.html count       # set element text
     disabled = false
     
     # button click
     elem = $("#button")
     animString = "animated flash"
-
     elem.on 'click', ->
         if not disabled
+            localStorage["count"] = 1 + parseInt(localStorage["count"]) if Modernizr.localstorage
             count += 1
             $count.html count
 
@@ -39,6 +47,7 @@ jQuery ($) ->
         answer = prompt("Prove that you're sober to reset your count:\n#{x} + #{y} = ")
         
         if parseInt(answer) is correct
+            localStorage["count"] = 0 if Modernizr.localstorage
             count = 0
             $count.html count
             disabled = false

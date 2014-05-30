@@ -15,11 +15,17 @@
     "tests"
   ],
   "install": {
-    "path": "js/vendor"
+    "path": "js/vendor",
+    "sources": {
+        "modernizr": [
+            "bower_components/modernizr/modernizr.js"
+        ]
+    }
   },
   "dependencies": {
     "animate.css": "~3.1.1",
     "bootstrap": "~3.1.1",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.2"
   }
 }

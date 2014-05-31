@@ -20,7 +20,7 @@ red = #bf332f
     border 3px solid gray
     font-size 4em
 #button
-    font-size 8em
+    font-size 7em
     background #e74c3c 
     width diameter
     height diameter
@@ -54,9 +54,7 @@ rounded()
     border-radius: 15px;
 
 // Positioning
-.flex-container
-    height: 100%;
-    width 100%
+fc()
     padding: 0;
     margin: 0;
     display: -webkit-box;
@@ -64,12 +62,28 @@ rounded()
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+.flex-outer-container
+    fc()
+    height: 100%;
+    width 100%
+    -webkit-flex-direction row
+    flex-direction row
+    -webkit-flex-flow row wrap
+    flex-flow row wrap
+    -webkit-align-items center
+    align-items center
+    -webkit-justify-content space-around
+    justify-content space-around
+.flex-container
+    fc()
     -webkit-flex-direction column
     flex-direction column
     -webkit-align-items center
     align-items center
     -webkit-justify-content center
     justify-content: center;
+#button-container
+    height 100%
 .flex-item
     text-align center
-    margin 15px
+    margin 8px

@@ -28,17 +28,17 @@ html
       ga('send', 'pageview');
 
   body
-    div.flex-container
-      div#title.flex-item
-        h1 Krunk Button
-      div#counter.flex-item
-        div.flex-container
-          div.flex-item
-            span
-              h1#count
-      div#button.flex-item.circle
-        div.flex-container
-          div.flex-item
-            span.glyphicon.glyphicon-glass
+    div.flex-outer-container
+      div.flex-item.flex-container
+        div#title.flex-item
+          h1 Krunk Button
+        div#counter.flex-item
+          div#button-container.flex-container
+            div.flex-item
+              span
+                h1#count
+      div#button.flex-item.flex-container.circle
+        div.flex-item
+          span.glyphicon.glyphicon-glass
     div#reset
       span.glyphicon.glyphicon-repeat
